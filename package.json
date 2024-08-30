@@ -1,0 +1,27 @@
+{
+  "name": "fem-password-generator",
+  "version": "1.0.0",
+  "description": "Using this design file will help you practice building projects in the same way professionals do. Seeing the details in the design will help you improve your accuracy when building projects and build projects faster.",
+  "main": "app.js",
+  "scripts": {
+    "compile:scss": "sass scss/main.scss style.css -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AssSam7/fem-password-generator.git"
+  },
+  "keywords": [
+    "Javascript",
+    "CSS",
+    "SCSS"
+  ],
+  "author": "Aslam Mohammed",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AssSam7/fem-password-generator/issues"
+  },
+  "homepage": "https://github.com/AssSam7/fem-password-generator#readme",
+  "devDependencies": {
+    "sass": "^1.77.8"
+  }
+}
