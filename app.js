@@ -1,3 +1,4 @@
+/* DOM Elements */
 const passLengthInput = document.querySelector("#length");
 const includeUppercaseCharsInput = document.querySelector("#includeUppercase");
 const includeLowercaseCharsInput = document.querySelector("#includeLowercase");
@@ -5,6 +6,7 @@ const includeNumCharsInput = document.querySelector("#includeNumbers");
 const includeSymbolsInput = document.querySelector("#includeSymbols");
 const submitBtn = document.querySelector("#submitBtn");
 
+/* Necessary variables */
 const upperCaseAlphabets = [...Array(26).keys()].map((i) =>
   String.fromCharCode(i + 97).toUpperCase()
 );
@@ -15,6 +17,7 @@ const symbols = [..."~!@#$%^&*-_="];
 const numbers = [...Array(10).keys()];
 let possibleChars = [];
 
+/* Logic Functions */
 function shuffleArray(array) {
   for (let i = array.length - 1; i > 0; i--) {
     const j = Math.floor(Math.random() * (i + 1));

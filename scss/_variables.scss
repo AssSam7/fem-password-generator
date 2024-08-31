@@ -1,0 +1,20 @@
+@use "sass:map";
+
+/* Colors */
+$color-primary: #a4ffaf;
+$color-light-white: #e6e5ea;
+$color-grey: #817d92;
+$color-dark-grey: #24232c;
+$color-very-dark-grey: #18171f;
+
+$color-strength-medium: #f8cd65;
+$color-strength-weak: #fb7c58;
+$color-strength-tooweak: #f64a4a;
+
+/* Typography */
+$font-face: "JetBrains Mono", monospace;
+$font-sizes-map: (
+  "body": "18px",
+  "heading-medium": "24px",
+  "heading-large": "32px",
+);
