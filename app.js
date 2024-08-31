@@ -15,8 +15,18 @@ const symbols = [..."~!@#$%^&*-_="];
 const numbers = [...Array(10).keys()];
 let possibleChars = [];
 
+function shuffleArray(array) {
+  for (let i = array.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [array[i], array[j]] = [array[j], array[i]];
+  }
+  return array;
+}
+
 function getRandomChars(quantity, max) {
   const arr = [];
+  possibleChars = shuffleArray(possibleChars);
+  console.log("Possible Chars: ", possibleChars);
   while (arr.length < quantity) {
     var index = Math.floor(Math.random() * max);
     if (arr.indexOf(index) === -1) {
