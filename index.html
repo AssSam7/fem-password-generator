@@ -10,10 +10,11 @@
       href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap"
       rel="stylesheet"
     />
+    <link href="style.css" rel="stylesheet" />
     <title>FEM | Password Generator</title>
   </head>
   <body>
-    <label> Password length: <input type="input" id="length" /> </label>
+    <!-- <label> Password length: <input type="input" id="length" /> </label>
     <br />
     <label>
       Include uppercase: <input type="checkbox" id="includeUppercase" />
@@ -33,7 +34,27 @@
 
     <p>Generated Password:</p>
 
-    <input type="submit" id="submitBtn" />
+    <input type="submit" id="submitBtn" /> -->
+    <div class="passgen__container">
+      <h3 class="passgen__title">Password Generator</h3>
+      <main class="passgen__box">
+        <div class="passgen__box--result">
+          <input
+            type="text"
+            name="passResult"
+            id="passResult"
+            placeholder="P4$5W0rD!"
+            disabled
+          />
+          <img
+            src="assets/fa-regular_copy.svg"
+            alt="Copy Icon"
+            class="icon__copy"
+          />
+        </div>
+        <div class="passgen__box--generator"></div>
+      </main>
+    </div>
 
     <script src="app.js"></script>
   </body>

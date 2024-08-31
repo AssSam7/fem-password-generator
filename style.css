@@ -1,17 +1,54 @@
-/* Error: Can't find stylesheet to import.
- *   ,
- * 1 | @import "colors";
- *   |         ^^^^^^^^
- *   '
- *   scss/main.scss 1:9  root stylesheet */
-
-body::before {
-  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
-      "Droid Sans Mono", monospace, monospace;
-  white-space: pre;
-  display: block;
-  padding: 1em;
-  margin-bottom: 1em;
-  border-bottom: 2px solid black;
-  content: "Error: Can't find stylesheet to import.\a   \2577 \a 1 \2502  @import \"colors\";\a   \2502          ^^^^^^^^\a   \2575 \a   scss/main.scss 1:9  root stylesheet";
+/* Colors */
+/* Typography */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
+
+html {
+  font-size: 62.5%; /* To make 1 rem = 10px instead of 16px for easier responsive breakdown */
+}
+
+body {
+  min-height: 100vh;
+  background-color: #000000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "JetBrains Mono", monospace;
+}
+
+.passgen__container {
+  width: 40vw;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.passgen__title {
+  color: #817d92;
+  font-size: 24px;
+  text-align: center;
+}
+.passgen__box--result {
+  padding: 1.5rem 2.5rem;
+  background-color: #24232c;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.passgen__box--result > input[type=text] {
+  outline: none;
+  border: 0;
+  background: transparent;
+  font-size: 32px;
+  width: 80%;
+}
+.icon__copy {
+  cursor: pointer;
+}
+.icon__copy:hover {
+  filter: invert(0.5);
+}
+
+/*# sourceMappingURL=style.css.map */

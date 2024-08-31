@@ -7,3 +7,14 @@
 html {
   font-size: 62.5%; /* To make 1 rem = 10px instead of 16px for easier responsive breakdown */
 }
+
+body {
+  min-height: 100vh;
+  background-color: #000000;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-family: $font-face;
+}

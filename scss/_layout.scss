@@ -1,0 +1,47 @@
+.passgen {
+  &__container {
+    width: 40vw;
+
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  &__title {
+    color: $color-grey;
+    font-size: map-get($map: $font-sizes-map, $key: "heading-medium");
+    text-align: center;
+  }
+
+  &__box {
+    &--result {
+      padding: 1.5rem 2.5rem;
+      background-color: $color-dark-grey;
+
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      & > input[type="text"] {
+        outline: none;
+        border: 0;
+        background: transparent;
+        font-size: map-get($map: $font-sizes-map, $key: "heading-large");
+        width: 80%;
+      }
+    }
+
+    &--generator {
+    }
+  }
+}
+
+.icon {
+  &__copy {
+    cursor: pointer;
+
+    &:hover {
+      filter: invert(0.5);
+    }
+  }
+}
