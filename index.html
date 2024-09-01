@@ -57,7 +57,7 @@
             <div class="char_length--label">Character length</div>
             <p class="char_length--value">0</p>
           </div>
-          <input type="range" value="0" min="1" max="20" id="charLength" />
+          <input type="range" value="0" min="0" max="20" id="charLength" />
           <label class="include_uppercase_chars">
             <input type="checkbox" id="includeUppercase" />
             <span>Include Uppercase letters</span>
@@ -74,6 +74,22 @@
             <input type="checkbox" id="includeSymbols" />
             <span>Include Symbols</span>
           </label>
+          <div class="password_strength">
+            <div class="password_strength--label">Strength</div>
+            <div class="password_strength--content">
+              <div class="strength_type"></div>
+              <div class="strength_indicator">
+                <p></p>
+                <p></p>
+                <p></p>
+                <p></p>
+              </div>
+            </div>
+          </div>
+          <button id="submit-btn">
+            <span>Generate</span
+            ><img src="assets/bx_arrow-to-left.svg" alt="Arrow to left" />
+          </button>
         </div>
       </main>
     </div>

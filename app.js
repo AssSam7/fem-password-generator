@@ -6,7 +6,7 @@ const includeNumCharsInput = document.querySelector("#includeNumbers");
 const includeSymbolsInput = document.querySelector("#includeSymbols");
 const charLengthInput = document.querySelector("#charLength");
 const charLengthValueEl = document.querySelector(".char_length--value");
-const submitBtn = document.querySelector("#submitBtn");
+const submitBtn = document.querySelector("#submit-btn");
 
 /* Necessary variables */
 const upperCaseAlphabets = [...Array(26).keys()].map((i) =>

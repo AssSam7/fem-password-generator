@@ -69,7 +69,38 @@ body {
   color: #a4ffaf;
   font-size: 32px;
 }
+.passgen__box--generator .password_strength {
+  background: #000;
+  padding: 2rem 3rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.passgen__box--generator .password_strength--label {
+  font-size: 18px;
+  color: #817d92;
+  text-transform: uppercase;
+}
+.passgen__box--generator .password_strength--content {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.passgen__box--generator .password_strength--content .strength_type {
+  font-size: 24px;
+  color: #e6e5ea;
+}
+.passgen__box--generator .password_strength--content .strength_indicator {
+  display: flex;
+  gap: 8px;
+}
+.passgen__box--generator .password_strength--content .strength_indicator p {
+  width: 10px;
+  height: 28px;
+  border: 1.3px solid #fff;
+}
 
+/* Icon Styles */
 .icon__copy {
   cursor: pointer;
 }
@@ -77,6 +108,7 @@ body {
   filter: invert(0.5);
 }
 
+/* Input Range Styles */
 input[type=range] {
   -webkit-appearance: none;
   background: #000;
@@ -87,6 +119,7 @@ input[type=range] {
   background-repeat: no-repeat;
 }
 
+/******** Chrome, Safari ********/
 input[type=range]::-webkit-slider-thumb {
   -webkit-appearance: none; /* clear browser thumb */
   width: 28px;
@@ -120,6 +153,65 @@ input[type=range]::-moz-range-thumb {
 input[type=range]::-moz-range-thumb:hover {
   background-color: #18171f;
   border: 1px solid #a4ffaf;
+}
+
+/* Input Checkbox Styles */
+input[type=checkbox] {
+  width: 2em;
+  height: 2rem;
+  accent-color: #a4ffaf;
+}
+
+label {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+label span {
+  font-size: 18px;
+  color: #e6e5ea;
+}
+
+/* Submit Button Styles */
+#submit-btn {
+  margin-bottom: 1rem;
+  border: 0;
+  outline: none;
+  cursor: pointer;
+  padding: 2.5rem 0;
+  font-size: 18px;
+  font-family: inherit;
+  color: #24232c;
+  text-transform: uppercase;
+  background-color: #a4ffaf;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+#submit-btn:hover {
+  background-color: transparent;
+  border: 1.5px solid #a4ffaf;
+  color: #a4ffaf;
+}
+#submit-btn:hover img {
+  filter: invert(0.7);
+}
+
+/* Color Classes for Strength Indicators */
+.strength-strong {
+  background-color: #a4ffaf;
+}
+
+.strength-medium {
+  background-color: #f8cd65;
+}
+
+.strength-weak {
+  background-color: #fb7c58;
+}
+
+.strength-tooweak {
+  background-color: #f64a4a;
 }
 
 /*# sourceMappingURL=style.css.map */

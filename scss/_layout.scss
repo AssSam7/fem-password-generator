@@ -58,10 +58,48 @@
           font-size: map-get($map: $font-sizes-map, $key: "heading-large");
         }
       }
+
+      .password_strength {
+        background: #000;
+        padding: 2rem 3rem;
+
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        &--label {
+          font-size: map-get($map: $font-sizes-map, $key: "body");
+          color: $color-grey;
+          text-transform: uppercase;
+        }
+
+        &--content {
+          display: flex;
+          align-items: center;
+          gap: 1rem;
+
+          .strength_type {
+            font-size: map-get($map: $font-sizes-map, $key: "heading-medium");
+            color: $color-light-white;
+          }
+
+          .strength_indicator {
+            display: flex;
+            gap: 8px;
+
+            p {
+              width: 10px;
+              height: 28px;
+              border: 1.3px solid #fff;
+            }
+          }
+        }
+      }
     }
   }
 }
 
+/* Icon Styles */
 .icon {
   &__copy {
     cursor: pointer;
@@ -72,6 +110,7 @@
   }
 }
 
+/* Input Range Styles */
 input[type="range"] {
   -webkit-appearance: none;
   background: #000;
@@ -82,6 +121,7 @@ input[type="range"] {
   background-repeat: no-repeat;
 }
 
+/******** Chrome, Safari ********/
 input[type="range"]::-webkit-slider-thumb {
   -webkit-appearance: none; /* clear browser thumb */
   width: 28px;
@@ -117,4 +157,64 @@ input[type="range"]::-moz-range-thumb {
     background-color: $color-very-dark-grey;
     border: 1px solid $color-primary;
   }
+}
+
+/* Input Checkbox Styles */
+input[type="checkbox"] {
+  width: 2em;
+  height: 2rem;
+  accent-color: $color-primary;
+}
+
+label {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+
+  span {
+    font-size: map-get($map: $font-sizes-map, $key: "body");
+    color: $color-light-white;
+  }
+}
+
+/* Submit Button Styles */
+#submit-btn {
+  margin-bottom: 1rem;
+  border: 0;
+  outline: none;
+  cursor: pointer;
+  padding: 2.5rem 0;
+  font-size: map-get($map: $font-sizes-map, $key: "body");
+  font-family: inherit;
+  color: $color-dark-grey;
+  text-transform: uppercase;
+  background-color: $color-primary;
+
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+
+  &:hover {
+    background-color: transparent;
+    border: 1.5px solid $color-primary;
+    color: $color-primary;
+  }
+
+  &:hover img {
+    filter: invert(0.7);
+  }
+}
+
+/* Color Classes for Strength Indicators */
+.strength-strong {
+  background-color: $color-primary;
+}
+.strength-medium {
+  background-color: $color-strength-medium;
+}
+.strength-weak {
+  background-color: $color-strength-weak;
+}
+.strength-tooweak {
+  background-color: $color-strength-tooweak;
 }
