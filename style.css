@@ -30,6 +30,11 @@ body {
   font-size: 24px;
   text-align: center;
 }
+.passgen__box {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
 .passgen__box--result {
   padding: 1.5rem 2.5rem;
   background-color: #24232c;
@@ -44,11 +49,77 @@ body {
   font-size: 32px;
   width: 80%;
 }
+.passgen__box--generator {
+  padding: 1.5rem 2.5rem;
+  background-color: #24232c;
+  color: #e6e5ea;
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+.passgen__box--generator .char_length {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.passgen__box--generator .char_length--label {
+  font-size: 18px;
+}
+.passgen__box--generator .char_length--value {
+  color: #a4ffaf;
+  font-size: 32px;
+}
+
 .icon__copy {
   cursor: pointer;
 }
 .icon__copy:hover {
   filter: invert(0.5);
+}
+
+input[type=range] {
+  -webkit-appearance: none;
+  background: #000;
+  height: 5px;
+  border-radius: 50px;
+  background-image: linear-gradient(#bcf7c3, #a4ffaf);
+  background-size: 0% 100%;
+  background-repeat: no-repeat;
+}
+
+input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none; /* clear browser thumb */
+  width: 28px;
+  height: 28px;
+  background-color: #e6e5ea;
+  border-radius: 100%;
+}
+input[type=range]::-webkit-slider-thumb:hover {
+  background-color: #18171f;
+  border: 1px solid #a4ffaf;
+}
+
+/******** Firefox ********/
+input[type=range]::-moz-range-progress {
+  appearance: none;
+  background: #a4ffaf;
+  outline: none;
+  height: 0.5rem;
+}
+
+input[type=range]::-moz-range-track {
+  background: #000;
+  height: 0.5rem;
+}
+
+input[type=range]::-moz-range-thumb {
+  height: 28px;
+  width: 28px;
+  border-radius: 100%;
+}
+input[type=range]::-moz-range-thumb:hover {
+  background-color: #18171f;
+  border: 1px solid #a4ffaf;
 }
 
 /*# sourceMappingURL=style.css.map */

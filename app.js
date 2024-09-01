@@ -4,6 +4,8 @@ const includeUppercaseCharsInput = document.querySelector("#includeUppercase");
 const includeLowercaseCharsInput = document.querySelector("#includeLowercase");
 const includeNumCharsInput = document.querySelector("#includeNumbers");
 const includeSymbolsInput = document.querySelector("#includeSymbols");
+const charLengthInput = document.querySelector("#charLength");
+const charLengthValueEl = document.querySelector(".char_length--value");
 const submitBtn = document.querySelector("#submitBtn");
 
 /* Necessary variables */
@@ -75,7 +77,7 @@ includeSymbolsInput.addEventListener("change", (e) => {
   }
 });
 
-submitBtn.addEventListener("click", () => {
+/* submitBtn.addEventListener("click", () => {
   if (passLengthInput.value) {
     console.log(
       getRandomChars(
@@ -84,4 +86,14 @@ submitBtn.addEventListener("click", () => {
       ).join("")
     );
   }
+}); */
+
+charLengthInput.addEventListener("input", () => {
+  const min = charLengthInput.min;
+  const max = charLengthInput.max;
+  const currentVal = charLengthInput.value;
+  charLengthValueEl.textContent = currentVal;
+
+  charLengthInput.style.backgroundSize =
+    ((currentVal - min) / (max - min)) * 100 + "% 100%";
 });

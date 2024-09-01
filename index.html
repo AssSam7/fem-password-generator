@@ -52,7 +52,29 @@
             class="icon__copy"
           />
         </div>
-        <div class="passgen__box--generator"></div>
+        <div class="passgen__box--generator">
+          <div class="char_length">
+            <div class="char_length--label">Character length</div>
+            <p class="char_length--value">0</p>
+          </div>
+          <input type="range" value="0" min="1" max="20" id="charLength" />
+          <label class="include_uppercase_chars">
+            <input type="checkbox" id="includeUppercase" />
+            <span>Include Uppercase letters</span>
+          </label>
+          <label class="include_lowercase_chars">
+            <input type="checkbox" id="includeLowercase" />
+            <span>Include Lowercase letters</span>
+          </label>
+          <label class="include_number_chars">
+            <input type="checkbox" id="includeNumbers" />
+            <span>Include Numbers</span>
+          </label>
+          <label class="include_symbol_chars">
+            <input type="checkbox" id="includeSymbols" />
+            <span>Include Symbols</span>
+          </label>
+        </div>
       </main>
     </div>
 
