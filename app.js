@@ -8,6 +8,8 @@ const charLengthInput = document.querySelector("#charLength");
 const charLengthValueEl = document.querySelector(".char_length--value");
 const passStrengthType = document.querySelector(".strength_type");
 const passStrengthIndicator = document.querySelector(".strength_indicator");
+const copyBtn = document.querySelector("#copy-btn");
+const copyToastEl = document.querySelector(".result_copy > span");
 const submitBtn = document.querySelector("#submit-btn");
 
 /* Global Vars */
@@ -131,6 +133,16 @@ document.querySelectorAll('input[type="checkbox"]').forEach((each) => {
     }
     console.log(passStrengthIndicator.children);
   });
+});
+
+/* Copy to Clipboard */
+copyBtn.addEventListener("click", () => {
+  copyToastEl.style.opacity = "1";
+  setTimeout(() => {
+    document.querySelector(".result_copy > span").style.opacity = "0";
+  }, 5000);
+
+  navigator.clipboard.writeText(generatedPassword);
 });
 
 submitBtn.addEventListener("click", () => {

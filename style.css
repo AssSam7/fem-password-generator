@@ -42,6 +42,18 @@ body {
   justify-content: space-between;
   align-items: center;
 }
+.passgen__box--result .result_copy {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.passgen__box--result .result_copy span {
+  color: #a4ffaf;
+  text-transform: uppercase;
+  font-size: 18px;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
 .passgen__box--result > input[type=text] {
   outline: none;
   border: 0;
@@ -109,9 +121,18 @@ body {
   filter: invert(0.5);
 }
 
+/* Copy Animation */
+@keyframes visibilityAnimation {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
 /* Input Range Styles */
 input[type=range] {
-  -webkit-appearance: none;
+  appearance: none;
   background: #000;
   height: 5px;
   border-radius: 50px;
@@ -198,7 +219,7 @@ label span {
   filter: invert(0.7);
 }
 
-/* Color Classes for Strength Indicators */
+/* Dynamic Utility Classes */
 .strength-strong {
   background-color: #a4ffaf;
 }
@@ -213,6 +234,15 @@ label span {
 
 .strength-tooweak {
   background-color: #f64a4a;
+}
+
+.add-visibility-animation {
+  -webkit-animation: seconds 1s forwards;
+  -webkit-animation-iteration-count: 1;
+  -webkit-animation-delay: 5s;
+  animation: visibilityAnimation 1s forwards;
+  animation-iteration-count: 1;
+  animation-delay: 3s;
 }
 
 /*# sourceMappingURL=style.css.map */

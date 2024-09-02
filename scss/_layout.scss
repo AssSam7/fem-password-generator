@@ -26,6 +26,20 @@
       justify-content: space-between;
       align-items: center;
 
+      .result_copy {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+
+        span {
+          color: $color-primary;
+          text-transform: uppercase;
+          font-size: map-get($map: $font-sizes-map, $key: "body");
+          opacity: 0;
+          transition: opacity 1s ease-in-out;
+        }
+      }
+
       & > input[type="text"] {
         outline: none;
         border: 0;
@@ -111,9 +125,19 @@
   }
 }
 
+/* Copy Animation */
+@keyframes visibilityAnimation {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
 /* Input Range Styles */
 input[type="range"] {
-  -webkit-appearance: none;
+  appearance: none;
   background: #000;
   height: 5px;
   border-radius: 50px;
@@ -206,7 +230,7 @@ label {
   }
 }
 
-/* Color Classes for Strength Indicators */
+/* Dynamic Utility Classes */
 .strength-strong {
   background-color: $color-primary;
 }
@@ -218,4 +242,12 @@ label {
 }
 .strength-tooweak {
   background-color: $color-strength-tooweak;
+}
+.add-visibility-animation {
+  -webkit-animation: seconds 1s forwards;
+  -webkit-animation-iteration-count: 1;
+  -webkit-animation-delay: 5s;
+  animation: visibilityAnimation 1s forwards;
+  animation-iteration-count: 1;
+  animation-delay: 3s;
 }
