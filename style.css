@@ -84,11 +84,12 @@ body {
 .passgen__box--generator .password_strength--content {
   display: flex;
   align-items: center;
-  gap: 1rem;
+  gap: 1.5rem;
 }
 .passgen__box--generator .password_strength--content .strength_type {
   font-size: 24px;
   color: #e6e5ea;
+  text-transform: uppercase;
 }
 .passgen__box--generator .password_strength--content .strength_indicator {
   display: flex;

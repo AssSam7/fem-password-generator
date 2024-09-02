@@ -76,11 +76,12 @@
         &--content {
           display: flex;
           align-items: center;
-          gap: 1rem;
+          gap: 1.5rem;
 
           .strength_type {
             font-size: map-get($map: $font-sizes-map, $key: "heading-medium");
             color: $color-light-white;
+            text-transform: uppercase;
           }
 
           .strength_indicator {
