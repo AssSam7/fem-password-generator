@@ -2,7 +2,7 @@
 
 ## Live Demo 🪁
 
-<a href="https://frontendmentor-passgenerator.netlify.app/" target="_blank">https://frontendmentor-passgenerator.netlify.app/</a>
+<a href="https://frontendmentor-passgenerator.netlify.app/" target="_new">https://frontendmentor-passgenerator.netlify.app/</a>
 
 ## User Stories 🏷️
 
