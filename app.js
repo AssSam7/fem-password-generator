@@ -42,6 +42,7 @@ function shuffleArray(array) {
   return array;
 }
 
+/* Generate Random Characters function */
 function getRandomChars(quantity, max) {
   const arr = [];
   possibleChars = shuffleArray(possibleChars);
@@ -55,6 +56,7 @@ function getRandomChars(quantity, max) {
   return arr;
 }
 
+/* Checkbox Event Listeners */
 includeUppercaseCharsInput.addEventListener("change", (e) => {
   if (e.target.checked) {
     possibleChars = possibleChars.concat(upperCaseAlphabets);
@@ -145,6 +147,7 @@ copyBtn.addEventListener("click", () => {
   navigator.clipboard.writeText(generatedPassword);
 });
 
+/* Submit Button Listener */
 submitBtn.addEventListener("click", () => {
   if (charLengthInput.value) {
     generatedPassword = getRandomChars(
@@ -153,8 +156,13 @@ submitBtn.addEventListener("click", () => {
     ).join("");
     passResultField.value = generatedPassword;
   }
+
+  if (includeOptions === 0) {
+    window.alert("Please choose either of the options to include");
+  }
 });
 
+/* Range Input Listener */
 charLengthInput.addEventListener("input", () => {
   const min = charLengthInput.min;
   const max = charLengthInput.max;
