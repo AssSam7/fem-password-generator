@@ -15,7 +15,11 @@ $color-strength-tooweak: #f64a4a;
 /* Typography */
 $font-face: "JetBrains Mono", monospace;
 $font-sizes-map: (
-  "body": 18px,
-  "heading-medium": 24px,
-  "heading-large": 32px,
+  "body": 1.8rem,
+  "heading-medium": 2.4rem,
+  "heading-large": 3.2rem,
 );
+
+/* Responsive Breakpoints */
+$bp-tablet: 768px;
+$bp-mobile: 375px;

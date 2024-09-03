@@ -4,7 +4,16 @@
 
     display: flex;
     flex-direction: column;
+
     gap: 2rem;
+
+    @media only screen and (max-width: $bp-tablet) {
+      width: 70vw;
+    }
+
+    @media only screen and (max-width: $bp-mobile) {
+      width: 90vw;
+    }
   }
 
   &__title {
@@ -17,6 +26,10 @@
     display: flex;
     flex-direction: column;
     gap: 2rem;
+
+    @media only screen and (max-width: $bp-tablet) {
+      margin-top: 1.5rem;
+    }
 
     &--result {
       padding: 1.5rem 2.5rem;
@@ -57,6 +70,10 @@
       display: flex;
       flex-direction: column;
       gap: 2.5rem;
+
+      @media only screen and (max-width: $bp-tablet) {
+        gap: 3rem;
+      }
 
       .char_length {
         display: flex;
@@ -118,6 +135,8 @@
 .icon {
   &__copy {
     cursor: pointer;
+    width: 2.1rem;
+    height: 2.4rem;
 
     &:hover {
       filter: invert(0.5);
@@ -149,8 +168,8 @@ input[type="range"] {
 /******** Chrome, Safari ********/
 input[type="range"]::-webkit-slider-thumb {
   -webkit-appearance: none; /* clear browser thumb */
-  width: 28px;
-  height: 28px;
+  width: 2.8rem;
+  height: 2.8rem;
   background-color: $color-light-white;
   border-radius: 100%;
 
@@ -174,8 +193,8 @@ input[type="range"]::-moz-range-track {
 }
 
 input[type="range"]::-moz-range-thumb {
-  height: 28px;
-  width: 28px;
+  height: 2.8rem;
+  width: 2.8rem;
   border-radius: 100%;
 
   &:hover {
@@ -186,7 +205,7 @@ input[type="range"]::-moz-range-thumb {
 
 /* Input Checkbox Styles */
 input[type="checkbox"] {
-  width: 2em;
+  width: 2rem;
   height: 2rem;
   accent-color: $color-primary;
 }
@@ -194,11 +213,18 @@ input[type="checkbox"] {
 label {
   display: flex;
   align-items: center;
+  justify-content: flex-start;
   gap: 1.5rem;
 
   span {
     font-size: map-get($map: $font-sizes-map, $key: "body");
     color: $color-light-white;
+  }
+
+  &.include_uppercase_chars {
+    @media only screen and (max-width: $bp-tablet) {
+      margin-top: 2rem;
+    }
   }
 }
 

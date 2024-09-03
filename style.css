@@ -1,5 +1,6 @@
 /* Colors */
 /* Typography */
+/* Responsive Breakpoints */
 * {
   margin: 0;
   padding: 0;
@@ -8,6 +9,16 @@
 
 html {
   font-size: 62.5%; /* To make 1 rem = 10px instead of 16px for easier responsive breakdown */
+}
+@media only screen and (max-width: 768px) {
+  html {
+    font-size: 40%;
+  }
+}
+@media only screen and (max-width: 375px) {
+  html {
+    font-size: 28.5%;
+  }
 }
 
 body {
@@ -25,15 +36,30 @@ body {
   flex-direction: column;
   gap: 2rem;
 }
+@media only screen and (max-width: 768px) {
+  .passgen__container {
+    width: 70vw;
+  }
+}
+@media only screen and (max-width: 375px) {
+  .passgen__container {
+    width: 90vw;
+  }
+}
 .passgen__title {
   color: #817d92;
-  font-size: 24px;
+  font-size: 2.4rem;
   text-align: center;
 }
 .passgen__box {
   display: flex;
   flex-direction: column;
   gap: 2rem;
+}
+@media only screen and (max-width: 768px) {
+  .passgen__box {
+    margin-top: 1.5rem;
+  }
 }
 .passgen__box--result {
   padding: 1.5rem 2.5rem;
@@ -50,7 +76,7 @@ body {
 .passgen__box--result .result_copy span {
   color: #a4ffaf;
   text-transform: uppercase;
-  font-size: 18px;
+  font-size: 1.8rem;
   opacity: 0;
   transition: opacity 1s ease-in-out;
 }
@@ -58,7 +84,7 @@ body {
   outline: none;
   border: 0;
   background: transparent;
-  font-size: 32px;
+  font-size: 3.2rem;
   width: 80%;
 }
 .passgen__box--generator {
@@ -69,17 +95,22 @@ body {
   flex-direction: column;
   gap: 2.5rem;
 }
+@media only screen and (max-width: 768px) {
+  .passgen__box--generator {
+    gap: 3rem;
+  }
+}
 .passgen__box--generator .char_length {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 .passgen__box--generator .char_length--label {
-  font-size: 18px;
+  font-size: 1.8rem;
 }
 .passgen__box--generator .char_length--value {
   color: #a4ffaf;
-  font-size: 32px;
+  font-size: 3.2rem;
 }
 .passgen__box--generator .password_strength {
   background: #000;
@@ -89,7 +120,7 @@ body {
   align-items: center;
 }
 .passgen__box--generator .password_strength--label {
-  font-size: 18px;
+  font-size: 1.8rem;
   color: #817d92;
   text-transform: uppercase;
 }
@@ -99,7 +130,7 @@ body {
   gap: 1.5rem;
 }
 .passgen__box--generator .password_strength--content .strength_type {
-  font-size: 24px;
+  font-size: 2.4rem;
   color: #e6e5ea;
   text-transform: uppercase;
 }
@@ -116,6 +147,8 @@ body {
 /* Icon Styles */
 .icon__copy {
   cursor: pointer;
+  width: 2.1rem;
+  height: 2.4rem;
 }
 .icon__copy:hover {
   filter: invert(0.5);
@@ -144,8 +177,8 @@ input[type=range] {
 /******** Chrome, Safari ********/
 input[type=range]::-webkit-slider-thumb {
   -webkit-appearance: none; /* clear browser thumb */
-  width: 28px;
-  height: 28px;
+  width: 2.8rem;
+  height: 2.8rem;
   background-color: #e6e5ea;
   border-radius: 100%;
 }
@@ -168,8 +201,8 @@ input[type=range]::-moz-range-track {
 }
 
 input[type=range]::-moz-range-thumb {
-  height: 28px;
-  width: 28px;
+  height: 2.8rem;
+  width: 2.8rem;
   border-radius: 100%;
 }
 input[type=range]::-moz-range-thumb:hover {
@@ -179,7 +212,7 @@ input[type=range]::-moz-range-thumb:hover {
 
 /* Input Checkbox Styles */
 input[type=checkbox] {
-  width: 2em;
+  width: 2rem;
   height: 2rem;
   accent-color: #a4ffaf;
 }
@@ -187,11 +220,17 @@ input[type=checkbox] {
 label {
   display: flex;
   align-items: center;
+  justify-content: flex-start;
   gap: 1.5rem;
 }
 label span {
-  font-size: 18px;
+  font-size: 1.8rem;
   color: #e6e5ea;
+}
+@media only screen and (max-width: 768px) {
+  label.include_uppercase_chars {
+    margin-top: 2rem;
+  }
 }
 
 /* Submit Button Styles */
@@ -201,7 +240,7 @@ label span {
   outline: none;
   cursor: pointer;
   padding: 2.5rem 0;
-  font-size: 18px;
+  font-size: 1.8rem;
   font-family: inherit;
   color: #24232c;
   text-transform: uppercase;
