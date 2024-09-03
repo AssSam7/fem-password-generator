@@ -155,6 +155,7 @@ submitBtn.addEventListener("click", () => {
       possibleChars.length
     ).join("");
     passResultField.value = generatedPassword;
+    passResultField.style.color = "#e6e5ea";
   }
 
   if (includeOptions === 0) {
